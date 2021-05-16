@@ -1,0 +1,14 @@
+while(episode# < total_episodes)
+    define exploit and explore chance
+    while(the episode is not ended(game not won))
+        if random(0, 1) <= exploit chance
+         and agent have learned something about current state
+            the agent moves according to the q-table
+        else
+            the agent does one random viable move
+        
+        moves have penalty(-reward), winnning the game has reward.
+        update q-table using following formula
+        Q(state, action) = (1-learning_rate)*Q(state, action) + learning_rate*(reward + max(Q(next_state, *)))
+
+Solve problem with learned Q table.
